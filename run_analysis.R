@@ -1,4 +1,4 @@
-setwd("F:/Andras_work/Courses/Coursera/2013-14/B_SP_DS_04-07_GettingAndCleaningData/PeerAssignment")
+#setwd("F:/Andras_work/Courses/Coursera/2013-14/B_SP_DS_04-07_GettingAndCleaningData/PeerAssignment")
 library(data.table) # Fast C-based library
 
 #############################################
@@ -100,6 +100,6 @@ names(A4) <- tmp
 #############################################
 A5 <- A4[, lapply(.SD, mean), by=c("SubjectID","Activity"), .SDcols=3:68]
 # Write it out into a csv file
-# write.table(A5,file="A5.csv",row.names=T,col.names=T,sep=",",quote=F)
+write.table(A5,file="A5.csv",row.names=F,col.names=T,sep=",",quote=F)
 
 
